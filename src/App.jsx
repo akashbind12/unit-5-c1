@@ -60,7 +60,7 @@ function App() {
               // Show Over here in the format: "over.ball" eg: 4.5 means 4th over and 5th ball
               // if 1 more ball is thrown then over is now 5.0
               // you have to write logic to form this string from current ball number.
-              counter.Ball
+              (counter.Ball/6).toFixed(1)
             }
           </h1>
         </div>
@@ -87,6 +87,7 @@ function App() {
       </div>
 
       {/* If score reaches greater than 100, show text "India Won" without quotes in h1 tag with class name 'status' */}
+      <h1 className="status"> {counter.Score>100 ? "India Won" : null}</h1>
     </div>
     
   );
